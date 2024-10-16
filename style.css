@@ -137,7 +137,7 @@ input {
 
 button { cursor: pointer; }
 
-ion-icon { pointer-events: none; color: var(--lightbrown);}
+ion-icon { pointer-events: none; color: var(--black);}
 
 address { font-style: normal; color: var(--lightbrown);}
 
@@ -486,6 +486,15 @@ body.nav-active { overflow: hidden; }
   margin-block-start: 16px;
 }
 
+.highlight-care {
+  color: #ff5733; /* Example color for "TAKING CARE" */
+  font-weight: bold; /* Optional: make it bold */
+}
+
+.highlight-helmet {
+  color: #337ab7; /* Example color for "HELMET" */
+  font-weight: bold; /* Optional: make it bold */
+}
 
 
 
@@ -518,7 +527,7 @@ body.nav-active { overflow: hidden; }
 .service-card .card-text { margin-block: 20px 15px; }
 
 .service-card .btn-circle {
-  color: var(--verdigris);
+  color: var(--black);
   font-size: 2rem;
   padding: 18px;
   border-radius: var(--radius-circle);
@@ -527,10 +536,89 @@ body.nav-active { overflow: hidden; }
 }
 
 .service-card .btn-circle:is(:hover, :focus-visible) {
-  background-color: var(--verdigris);
+  background-color: var(--lightbrown);
   color: var(--white);
 }
 
+
+
+/*-----------------------------------*\
+  #Price lsit
+\*-----------------------------------*/
+/*-----------------------------------*\
+  #PRICELIST
+\*-----------------------------------*/
+
+.pricelist {
+  background-image: linear-gradient(to bottom, var(--white) 60%);
+  padding-block: 60px 30px;
+}
+
+.pricelist .section-title {
+  margin-block-end: 40px;
+}
+
+.pricelist .grid-list {
+  display: grid;
+  gap: 30px;
+  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+
+.price-card {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Push elements to top and bottom */
+  height: 60rem;
+  padding: 40px;
+  border-radius: var(--radius-12);
+  background-color: var(--white);
+  box-shadow: var(--shadow-1);
+  text-align: center;
+  transition: var(--transition-2);
+}
+
+.additional-services {
+  margin-top: auto; /* Push this section to the bottom */
+  text-align: left; /* Optional: Align text to the left if preferred */
+}
+
+.price-card h3 {
+  font-size: 5rem;
+  margin-bottom: 15px;
+  color: var(--midnight-green);
+}
+
+.price-card .card-text {
+  margin: 10px 0;
+  color: var(--space-cadet);
+  font-size: 1.6rem;
+}
+
+.price-card .price {
+  margin: 15px 0;
+  font-weight: bold;
+  color: var(--lightbrown);
+  font-size: 2.8rem;
+}
+
+.price-card .btn-text {
+  margin-top: 20px;
+  color: var(--lightbrown);
+  font-size: 1.3rem;
+  transition: var(--transition-1);
+}
+
+.price-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-2);
+}
+
+.price-card:hover .btn-text {
+  color: var(--verdigris);
+}
 
 
 
@@ -593,7 +681,7 @@ body.nav-active { overflow: hidden; }
   #LISTING
 \*-----------------------------------*/
 
-.listing { background-color: var(--midnight-green); }
+.listing { background-color: var(--alice-blue); }
 
 .listing-card {
   padding: 25px 16px;
@@ -703,8 +791,8 @@ body.nav-active { overflow: hidden; }
 \*-----------------------------------*/
 
 .footer {
-  background-color: var(--alice-blue);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--lightbrown);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
@@ -717,7 +805,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .footer-brand {
-  background-color: var(--black);
+  background-color: var(--alice-blue);
   padding: 32px;
   border-radius: var(--radius-6);
 }
@@ -738,10 +826,10 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
-.contact-link:is(:hover, :focus-visible) { color: var(--verdigris); }
+.contact-link:is(:hover, :focus-visible) { color: var(--alice-blue); }
 
 .footer-list-title {
-  color: var(--white);
+  color: var(--lightbrown);
   font-weight: var(--fw-700);
   margin-block-end: 20px;
 }
@@ -768,7 +856,7 @@ body.nav-active { overflow: hidden; }
 .footer-link:is(:hover, :focus-visible) { color: var(--verdigris); }
 
 .footer-form .input-field {
-  color: var(--white);
+  color: var(--lightbrown);
   border: 1px solid var(--white_a20);
   border-radius: var(--radius-4);
   padding: 8px 20px;
@@ -784,7 +872,7 @@ body.nav-active { overflow: hidden; }
 
 .footer-bottom {
   padding-block: 32px;
-  border-block-start: 1px solid var(--white_a20);
+  border-block-start: 1px solid var(--lightbrown);
 }
 
 .footer-bottom .social-list {
@@ -796,12 +884,12 @@ body.nav-active { overflow: hidden; }
 .footer-bottom .social-link {
   font-size: 1.4rem;
   padding: 12px;
-  background-color: var(--white_a10);
+  background-color: var(--lightbrown);
   border-radius: var(--radius-circle);
   transition: var(--transition-1);
 }
 
-.footer-bottom .social-link:is(:hover, :focus-visible) { background-color: var(--verdigris); }
+.footer-bottom .social-link:is(:hover, :focus-visible) { background-color: var(--lightbrown); }
 
 
 
@@ -815,8 +903,8 @@ body.nav-active { overflow: hidden; }
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: var(--Orange);
-  color: var(--white);
+  background-color: var(--lightbrown);
+  color: var(--lightbrown);
   padding: 16px;
   font-size: 2rem;
   border-radius: var(--radius-circle);
@@ -825,7 +913,7 @@ body.nav-active { overflow: hidden; }
   z-index: 3;
 }
 
-.back-top-btn:is(:hover, :focus-visible) { background-color: var(--eerie-black); }
+.back-top-btn:is(:hover, :focus-visible) { background-color: var(--lightbrown); }
 
 .back-top-btn.active {
   transform: translateY(-10px);
@@ -929,6 +1017,8 @@ body.nav-active { overflow: hidden; }
   .about-banner {
     max-width: max-content;
     margin-inline: auto;
+    width: 500px;
+    height: 550px;
   }
 
 
