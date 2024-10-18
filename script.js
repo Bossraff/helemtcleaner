@@ -92,3 +92,29 @@ const revealElementOnScroll = function () {
 window.addEventListener("scroll", revealElementOnScroll);
 
 window.addEventListener("load", revealElementOnScroll);
+
+
+
+/**
+ * about
+ */
+// Select all tab buttons and content elements
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content .tab-text');
+
+// Function to switch tabs
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to the clicked button
+    button.classList.add('active');
+
+    // Hide all tab contents
+    tabContents.forEach(content => content.classList.remove('active'));
+
+    // Get the target tab content to show
+    const targetContent = button.getAttribute('data-tab');
+    document.querySelector(`[data-tab-content="${targetContent}"]`).classList.add('active');
+  });
+});
