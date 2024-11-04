@@ -574,7 +574,7 @@ body.nav-active { overflow: hidden; }
   display: flex;
   flex-direction: column; /* Stack items vertically */
   justify-content: space-between; /* Push elements to top and bottom */
-  height: 60rem;
+  height: 70rem;
   padding: 40px;
   border-radius: var(--radius-12);
   background-color: var(--white);
