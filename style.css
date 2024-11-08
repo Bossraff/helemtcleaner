@@ -623,8 +623,17 @@ body.nav-active { overflow: hidden; }
   color: red;
 }
 
-
-
+.additional-services {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  align-items: center; /* Center the text */
+  width: 100%;
+  max-width: 600px; /* Optional: Limits the width */
+  margin-left: auto; /* Centers the container horizontally */
+  margin-right: auto; /* Centers the container horizontally */
+  border-top: 1px solid #ddd; /* Optional: Adds a border for separation */
+}
 
 /*-----------------------------------*\
   #ABOUT
